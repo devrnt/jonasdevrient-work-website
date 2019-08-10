@@ -1,23 +1,23 @@
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Container, Button } from 'Common'
-import dev from 'Static/illustrations/skills.svg'
+import dev from 'Static/profile-picture.png'
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles'
 
 export const Skills = () => (
 	<Wrapper id="about">
 		<SkillsWrapper as={Container}>
-			<Thumbnail>
-				<img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />
+			<Thumbnail style={{textAlign:`center`}}>
+				<img src={dev} style={{borderRadius: `100px`, width:`200px`, border:`1px solid #333399`}} alt="profiel foto van Jonas De Vrient" />
 			</Thumbnail>
 			<Details>
-				<h1>Hi There!</h1>
+				<h1>En nu even persoonlijk...</h1>
 				<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry’s standard dummy.
+					Heeft u vragen over mijn projecten of wilt u contact met mij opnemen,
+					 aarzel niet en vul het onderstaande formulier in.
 				</p>
 				<Button as={AnchorLink} href="#contact">
-					Hire me
+					Contact
 				</Button>
 			</Details>
 		</SkillsWrapper>
