@@ -14,6 +14,7 @@ const Navbar = () => (
 				style={{
 					width: `45px`,
 					height: `45px`,
+					marginBottom: `0`
 				}} />
 		</Link>
 		<NavbarLinks desktop />
