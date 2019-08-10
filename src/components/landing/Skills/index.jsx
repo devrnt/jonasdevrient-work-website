@@ -8,7 +8,7 @@ export const Skills = () => (
 	<Wrapper id="about">
 		<SkillsWrapper as={Container}>
 			<Thumbnail style={{textAlign:`center`}}>
-				<img src={dev} style={{borderRadius: `100px`, width:`200px`, border:`1px solid #333399`}} alt="profiel foto van Jonas De Vrient" />
+				<img src={dev} style={{borderRadius: `100px`, width:`200px`, border:`2px solid #333399`}} alt="profiel foto van Jonas De Vrient" />
 			</Thumbnail>
 			<Details>
 				<h1>En nu even persoonlijk...</h1>

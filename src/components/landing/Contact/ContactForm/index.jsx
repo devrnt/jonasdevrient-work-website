@@ -27,7 +27,7 @@ const ContactForm = ({
 				name="name"
 				component="input"
 				aria-label="name"
-				placeholder="Full name*"
+				placeholder="Volledige naam*"
 				error={touched.name && errors.name}
 			/>
 			<ErrorMessage component={Error} name="name" />
@@ -40,7 +40,7 @@ const ContactForm = ({
 				as={FastField}
 				type="email"
 				name="email"
-				placeholder="Email*"
+				placeholder="E-mail*"
 				error={touched.email && errors.email}
 			/>
 			<ErrorMessage component={Error} name="email" />
@@ -54,7 +54,7 @@ const ContactForm = ({
 				rows="8"
 				type="text"
 				name="message"
-				placeholder="Message*"
+				placeholder="Bericht*"
 				error={touched.message && errors.message}
 			/>
 			<ErrorMessage component={Error} name="message" />
@@ -82,7 +82,7 @@ const ContactForm = ({
 		)}
 		<Center>
 			<Button secondary type="submit" disabled={isSubmitting}>
-				Submit
+				Verzend
 			</Button>
 		</Center>
 	</Form>
@@ -98,12 +98,12 @@ export default withFormik({
 	}),
 	validationSchema: () =>
 		Yup.object().shape({
-			name: Yup.string().required('Full name field is required'),
+			name: Yup.string().required('Volledige naam is verplicht'),
 			email: Yup.string()
-				.email('Invalid email')
-				.required('Email field is required'),
-			message: Yup.string().required('Message field is required'),
-			recaptcha: Yup.string().required('Robots are not welcome yet!'),
+				.email('Ongeldige e-mail')
+				.required('E-mail is verplicht'),
+			message: Yup.string().required('Bericht is verplicht'),
+			recaptcha: Yup.string().required('Robots zijn niet welkom!'),
 		}),
 	handleSubmit: async (
 		{ name, email, message, recaptcha },
