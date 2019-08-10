@@ -68,6 +68,17 @@ module.exports = {
 			},
 		},
 		{
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Red Hat Display`,
+            variants: [`400`, `500`, `700`, `900`],
+          },
+        ],
+      },
+    },
+		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: config.defaultTitle,

@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export const Global = createGlobalStyle`
   html {
-    font-family: 'Roboto', Helvetica, sans-serif;
+    font-family: 'Red Hat Display', Helvetica, sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 
@@ -602,7 +602,7 @@ export const Global = createGlobalStyle`
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', Helvetica, sans-serif;
+      font-family: 'Red Hat Display', sans-serif;
       color: hsla(0, 0%, 0%, 0.8);
       font-weight: normal;
       word-wrap: break-word;
