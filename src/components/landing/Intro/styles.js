@@ -39,9 +39,10 @@ export const Details = styled.div`
 
 	h4 {
 		margin-bottom: 2.5rem;
-		font-size: 32pt;
+		font-size: 28pt;
+		// line-height: 32pt;
 		font-weight: normal;
-		color: #707070;
+		color: #656565;
 
 		@media (max-width: 680px) {
 			font-size: 26pt;

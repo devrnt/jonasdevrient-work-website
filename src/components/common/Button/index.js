@@ -13,7 +13,13 @@ export const Button = styled.button`
 	-ms-user-select: none;
 	user-select: none;
 	color: #fff;
-	background: #0074d9;
+	background: #333399;
+	// background: linear-gradient(40deg, #333399, #BA00FF);
+	transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+	&:hover {
+		background: #202086;
+	}
 
 	&:focus {
 		outline: none;
