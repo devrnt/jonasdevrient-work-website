@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { Container } from 'Common'
 import NavbarLinks from '../NavbarLinks'
 import { Wrapper } from './styles'
-import logo from '../../../../../static/logo.png'
+import logo from '../../../../../static/logo (1).png'
 
 const Navbar = () => (
 	<Wrapper as={Container}>
