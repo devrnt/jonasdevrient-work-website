@@ -1,19 +1,19 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	a {
-		color: #656565;
-		text-decoration: none;
-		transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+  a {
+    color: #656565;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
 
-		&:hover {
-			color: black;
-		}
-	}
+    &:hover {
+      color: black;
+    }
+  }
 
-	${({ desktop }) =>
-		desktop
-			? `
+  ${({ desktop }) =>
+    desktop
+      ? `
 			@media (max-width: 960px) {
 					display: none;
 			}
@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
 					}
 			}
 		`
-			: `
+      : `
 			padding: 5rem 3.5rem;
 			display: flex;
 			flex-direction: column;

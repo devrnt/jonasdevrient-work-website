@@ -11,9 +11,10 @@ const Navbar = () => (
 			{/* Jonas De Vrient */}
 			<img
 				src={logo} 
+				alt="logo Jonas De Vrient"
 				style={{
-					width: `45px`,
-					height: `45px`,
+					width: `55px`,
+					height: `55px`,
 					marginBottom: `0`
 				}} />
 		</Link>
