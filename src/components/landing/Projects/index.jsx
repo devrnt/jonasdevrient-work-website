@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Container, Card } from 'Common'
 import starIcon from 'Static/icons/star.svg'
 import forkIcon from 'Static/icons/fork.svg'
@@ -50,13 +50,12 @@ export const Projects = () => {
 			<h2>Projecten</h2>
 			<Grid>
 				{edges.map(({ node }) => (
-					<Item
-						key={node.id}
-						as="a"
-						href={node.url}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+						<Link
+							key={node.id}
+							to={`/${node.name}`}
+							rel="noopener noreferrer"
+						>
+						<Item >
 						<Card>
 							<Content>
 								<h4>{node.name}</h4>
@@ -87,6 +86,7 @@ export const Projects = () => {
 							</Stats>
 						</Card>
 					</Item>
+						</Link>
 				))}
 			</Grid>
 		</Wrapper>
