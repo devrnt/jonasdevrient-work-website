@@ -52,7 +52,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-favicon',
 			options: {
-				logo: './static/favicon/favicon-512.png',
+				logo: './static/logo (1).png',
 				injectHTML: true,
 				icons: {
 					android: true,
@@ -82,7 +82,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: config.defaultTitle,
-				short_name: 'starter',
+				short_name: 'Jonas De Vrient',
 				start_url: '/',
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
