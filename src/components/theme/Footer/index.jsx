@@ -11,7 +11,7 @@ export const Footer = () => (
 				<span>
 					© All rights are reserved | {new Date().getFullYear()} | Gemaakt met {' '}
 					<span aria-label="love" role="img">
-						💖
+						❤️
 					</span>{' '}
 					door {' '}
 					<a
