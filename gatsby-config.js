@@ -36,6 +36,13 @@ module.exports = {
 			},
 		},
 		{
+      resolve: "gatsby-source-gh-readme",
+      options: {
+        gitHubToken: `${process.env.GITHUB_TOKEN}`
+      }
+		},
+		`gatsby-transformer-remark`,
+		{
 			resolve: 'gatsby-plugin-nprogress',
 			options: {
 				color: config.themeColor,
@@ -52,7 +59,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-favicon',
 			options: {
-				logo: './static/logo (1).png',
+				logo: './static/logo.png',
 				injectHTML: true,
 				icons: {
 					android: true,
@@ -87,7 +94,7 @@ module.exports = {
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
 				display: 'minimal-ui',
-				icon: './static/favicon/favicon-512.png',
+				icon: './static/logo.png',
 			},
 		},
 		'gatsby-plugin-offline',
