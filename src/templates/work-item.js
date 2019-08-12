@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from 'gatsby';
 import { Layout, Container } from 'Common'
 import { IntroWrapper, Details } from "../components/landing/Intro/styles";
+import { SEO } from "../components/common/SEO";
 
 export default ({data}) => {
   const project = data.github.repositoryOwner.repository;
@@ -17,8 +18,15 @@ export default ({data}) => {
       element.src = updatedSrc;
     } 
   }
+
+  const title = `${project.name[0].toUpperCase()}${project.name.replace('-', ' ').substring(1)} | Jonas De Vrient `
   
   return (
+    <>
+    <SEO
+     title={title}
+     description={project.description}
+     />
     <Layout>
       <IntroWrapper as={Container}>
         <Details>
@@ -26,6 +34,7 @@ export default ({data}) => {
         </Details>
       </IntroWrapper>
     </Layout>
+    </>
   );
 }
 
