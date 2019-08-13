@@ -6,21 +6,33 @@ import { SEO } from "../components/common/SEO";
 
 export default ({data}) => {
   const project = data.github.repositoryOwner.repository;
-  const readmeHtml = data.githubReadme.childMarkdownRemark.html;
-  const dom = new DOMParser().parseFromString(readmeHtml, 'text/html');
-
-  const images = dom.getElementsByTagName('img');
-  for(let element of images){
-    if(element.src.endsWith('.gif')){
-      const srcEnd = element.src.split('/showcase/')[1];
-      const beginUrl = `https://raw.github.com/devrnt/${project.name}/master/showcase/`;
-      const updatedSrc = `${beginUrl}${srcEnd}`;
-      element.src = updatedSrc;
-    } 
+  let readmeHtml = '';
+  if(data.githubReadme !== null){
+    readmeHtml = data.githubReadme.childMarkdownRemark.html;
   }
 
+  let dom = ``;
+  // Wrap the require in check for window
+  if (typeof window !== `undefined`) {
+    dom = document.createElement('div');
+    dom.innerHTML = readmeHtml;
+    
+    const images = dom.getElementsByTagName('img');
+    for(let element of images){
+      if(element.src.endsWith('.gif')){
+        const srcEnd = element.src.split('/showcase/')[1];
+        const beginUrl = `https://raw.github.com/devrnt/${project.name}/master/showcase/`;
+        const updatedSrc = `${beginUrl}${srcEnd}`;
+        element.src = updatedSrc;
+      } 
+  }
+  }
+
+  console.log(dom);
+
+   
   const title = `${project.name[0].toUpperCase()}${project.name.replace('-', ' ').substring(1)} | Jonas De Vrient `
-  
+
   return (
     <>
     <SEO
@@ -30,7 +42,7 @@ export default ({data}) => {
     <Layout>
       <IntroWrapper as={Container}>
         <Details>
-          <div dangerouslySetInnerHTML={{__html: dom.documentElement.innerHTML}}></div>
+          <div dangerouslySetInnerHTML={{__html: dom.innerHTML}}></div>
         </Details>
       </IntroWrapper>
     </Layout>
