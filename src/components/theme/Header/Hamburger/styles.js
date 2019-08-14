@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   z-index: 5;
-  top: 1.6rem;
+  top: 2.4rem;
   right: 1.8rem;
   display: none;
   cursor: pointer;
@@ -33,7 +33,7 @@ export const Bar = styled.div`
 	width: 1.6rem;
 	height: .15rem;
 	margin-bottom: .3rem;
-	background-color: #212121;
+	background-color: #3b3b3b;
 	transition: transform 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91),
 	opacity 500ms,
 	box-shadow 250ms,
