@@ -13,8 +13,8 @@ const Navbar = () => (
 				src={logo} 
 				alt="logo Jonas De Vrient"
 				style={{
-					width: `55px`,
-					height: `55px`,
+					width: `50px`,
+					height: `50px`,
 					marginBottom: `0`
 				}} />
 		</Link>

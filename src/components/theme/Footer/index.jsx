@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'gatsby';
 import { Container } from 'Common'
 import { Wrapper, Flex, Links, Details } from './styles'
 import social from './social.json'
@@ -15,13 +16,17 @@ export const Footer = () => (
 					</span>{' '}
 					door {' '}
 					<a
-						href="https://smakosh.com/?ref=portfolio-dev"
+						href="https://me.jonasdevrient.be"
 						rel="noopener noreferrer"
 						target="_blank"
 					>
 						Jonas De Vrient 
 					</a>
-					{' '} te Kruisem
+					{' '} te Kruisem - 
+					<Link 
+						to={`/over`}
+						rel="noopener noreferrer"
+					> Gatsby </Link>
 				</span>
 			</Details>
 			<Links>

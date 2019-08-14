@@ -39,14 +39,13 @@ export default ({data}) => {
      description={project.description}
      />
     <Layout>
-      
       <IntroWrapper as={Container}>
         <Details>
         <Link to="/#projects">
 			{/* Jonas De Vrient */}
 			<img
 				src={goBack} 
-				alt="logo Jonas De Vrient"
+				alt="Ga terug"
 				style={{
 					width: `2.5rem`,
 					height: `2.5rem`,

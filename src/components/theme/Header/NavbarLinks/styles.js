@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
 
     &:hover {
-      color: black;
+      color: #333399;
     }
   }
 

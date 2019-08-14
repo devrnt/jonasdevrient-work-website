@@ -30,5 +30,6 @@ module.exports = {
 		phone: '+32 470 68 91 78',
 	},
 	foundingDate: '2019',
-	recaptcha_key: '6LeYX7IUAAAAAJ92eB8QHNDU1V4pH6cWwMIx-qkq'
+	recaptcha_key: '6LcT9bIUAAAAAHNJfg25lktDyk9HL_87dElUENwA'
 }
+

@@ -74,8 +74,7 @@ const ContactForm = ({
 			<InputField>
 				<Center>
 					<h4>
-						Your message has been successfully sent, I will get back to you
-						ASAP!
+						Uw bericht is succesvol verzonden, u kunt binnenkort een antwoord verwachten.
 					</h4>
 				</Center>
 			</InputField>
@@ -117,7 +116,7 @@ export default withFormik({
 					)
 					.join('&')
 			}
-			await fetch('/?no-cache=1', {
+			await fetch('https://formspree.io/contact@jonasdevrient.be', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 				body: encode({
@@ -130,11 +129,11 @@ export default withFormik({
 			})
 			await setSubmitting(false)
 			await setFieldValue('success', true)
-			setTimeout(() => resetForm(), 2000)
+			setTimeout(() => resetForm(), 3000)
 		} catch (err) {
 			setSubmitting(false)
 			setFieldValue('success', false)
-			alert('Something went wrong, please try again!') // eslint-disable-line
+			alert('Er ging iets mis, heeft u een internetverbinding?') // eslint-disable-line
 		}
 	},
 })(ContactForm)
