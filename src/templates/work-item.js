@@ -1,8 +1,10 @@
 import React from "react"
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Layout, Container } from 'Common'
 import { IntroWrapper, Details } from "../components/landing/Intro/styles";
 import { SEO } from "../components/common/SEO";
+import goBack from '../../static/icons/go-back.svg';
+
 
 export default ({data}) => {
   const project = data.github.repositoryOwner.repository;
@@ -27,9 +29,6 @@ export default ({data}) => {
       } 
   }
   }
-
-  console.log(dom);
-
    
   const title = `${project.name[0].toUpperCase()}${project.name.replace('-', ' ').substring(1)} | Jonas De Vrient `
 
@@ -40,8 +39,20 @@ export default ({data}) => {
      description={project.description}
      />
     <Layout>
+      
       <IntroWrapper as={Container}>
         <Details>
+        <Link to="/#projects">
+			{/* Jonas De Vrient */}
+			<img
+				src={goBack} 
+				alt="logo Jonas De Vrient"
+				style={{
+					width: `2.5rem`,
+					height: `2.5rem`,
+					marginBottom: `2.5rem`
+				}} />
+		</Link>
           <div dangerouslySetInnerHTML={{__html: dom.innerHTML}}></div>
         </Details>
       </IntroWrapper>
