@@ -50,24 +50,6 @@ module.exports = {
 			},
 		},
 		{
-			resolve: 'gatsby-plugin-favicon',
-			options: {
-				logo: './static/logo.png',
-				injectHTML: true,
-				icons: {
-					android: true,
-					appleIcon: true,
-					appleStartup: true,
-					coast: false,
-					favicons: true,
-					firefox: true,
-					twitter: false,
-					yandex: false,
-					windows: false,
-				},
-			},
-		},
-		{
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
