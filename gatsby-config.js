@@ -150,7 +150,6 @@ module.exports = {
           },
           {
             userAgent: `Googlebot-Image`,
-            allow: [`/favicons/`, `logo.png`],
             disallow: [`/`]
           }
         ],
