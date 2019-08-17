@@ -4,7 +4,7 @@
     On failure the user is redirected to /mislukt
   -->
   <?php
-  $to = "contact@jonasdevrient.be"; // uw mail adres
+  $to = "me@jonasdevrient.be"; // uw mail adres
 
   $from = $_POST['email']; // afzenders mail adres
 
