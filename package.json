@@ -26,7 +26,6 @@
     "gatsby-source-gh-readme": "^1.0.10",
     "gatsby-source-graphql": "^2.1.5",
     "gatsby-transformer-remark": "^2.6.12",
-    "gatsby-transformer-sharp": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",

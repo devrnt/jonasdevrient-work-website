@@ -3,18 +3,18 @@
     "id": 1,
     "name": "Github",
     "link": "https://github.com/devrnt",
-    "icon": "/icons/github.svg"
+    "icon": "/svg/github.svg"
   },
   {
     "id": 2,
     "name": "StackOverflow",
     "link": "https://stackoverflow.com/users/10230923/jonas-de-vrient",
-    "icon": "/icons/stackoverflow.svg"
+    "icon": "/svg/stackoverflow.svg"
   },
   {
     "id": 3,
     "name": "Twitter",
     "link": "https://twitter.com/GioFieldz",
-    "icon": "/icons/twitter.svg"
+    "icon": "/svg/twitter.svg"
   }
 ]
