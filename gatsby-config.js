@@ -14,13 +14,6 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-styled-components',
-		/* {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'assets',
-        path: '${__dirname}/src/assets',
-      },
-    }, */
 		'gatsby-plugin-sharp',
 		{
 			resolve: 'gatsby-source-graphql',
@@ -139,6 +132,29 @@ module.exports = {
         ],
 			},
 		},
+		{
+      resolve: `gatsby-plugin-htaccess`,
+      options: {
+        https: true,
+        www: false,
+      }
+		},
+		{
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        policy: [
+          {
+            userAgent: `*`,
+            allow: `/`,
+          },
+          {
+            userAgent: `Googlebot-Image`,
+            allow: [`/favicons/`, `logo.png`],
+            disallow: [`/`]
+          }
+        ],
+      },
+    },
 		'gatsby-plugin-offline',
 		{
 			resolve: `gatsby-plugin-alias-imports`,
