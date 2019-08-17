@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby'
 import { Layout, Container } from 'Common'
 import { IntroWrapper, Details } from '../components/landing/Intro/styles'
 import { SEO } from '../components/common/SEO'
-import goBack from '../../static/icons/go-back.svg'
+import goBack from 'Static/svg/go-back.svg'
 
 export default ({ data }) => {
   const project = data.github.repositoryOwner.repository

@@ -1,11 +1,10 @@
 import React from 'react'
 import { Layout, SEO } from 'Common'
-import { Wrapper } from '../components/theme/Header/NavbarLinks/styles'
 import { Container } from 'Common'
-import goBack from '../../static/icons/go-back.svg'
 import { Link } from 'gatsby'
 import { IntroWrapper } from '../components/landing/Intro/styles'
 import { Details } from '../components/theme/Footer/styles'
+import goBack from 'Static/svg/go-back.svg'
 
 export default () => (
   <>

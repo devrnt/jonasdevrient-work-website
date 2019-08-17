@@ -1,6 +1,6 @@
 module.exports = {
 	defaultTitle: 'Werk van Jonas De Vrient',
-	logo: 'https://jonasdevrient.be/img/logo/logo.png',
+	logo: 'https://work.jonasdevrient.be/logo.png',
 	author: 'Jonas De Vrient',
 	url: 'https://work.jonasdevrient.be',
 	legalName: 'Jonas De Vrient',

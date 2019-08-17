@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Container, Card } from 'Common'
-import starIcon from 'Static/icons/star.svg'
-import forkIcon from 'Static/icons/fork.svg'
+import starIcon from 'Static/svg/star.svg'
+import forkIcon from 'Static/svg/fork.svg'
 import { Wrapper, Grid, Item, Content, Stats } from './styles'
 
 export const Projects = () => {
