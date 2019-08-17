@@ -116,7 +116,8 @@ export default withFormik({
 					)
 					.join('&')
 			}
-			await fetch('https://formspree.io/contact@jonasdevrient.be', {
+			// form.php located in the static folder
+			await fetch('./form.php', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 				body: encode({
