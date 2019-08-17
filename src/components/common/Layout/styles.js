@@ -92,7 +92,7 @@ export const Global = createGlobalStyle`
     kbd,
     pre,
     samp {
-      font-family: monospace, monospace;
+      font-family: 'Red Hat Display', monospace;
       font-size: 1em;
     }
     figure {
@@ -571,7 +571,7 @@ export const Global = createGlobalStyle`
     code {
       background-color: hsla(0, 0%, 0%, 0.04);
       border-radius: 3px;
-      font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
+      font-family: 'Red Hat Display', Consolas, 'Roboto Mono', 'Droid Sans Mono',
         'Liberation Mono', Menlo, Courier, monospace;
       padding: 0;
       padding-top: 0.2em;
