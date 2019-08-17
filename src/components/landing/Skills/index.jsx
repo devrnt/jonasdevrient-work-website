@@ -11,9 +11,9 @@ export const Skills = () => (
 				<img src={dev} style={{borderRadius: `100px`, width:`200px`, border:`2px solid #333399`}} alt="profiel foto van Jonas De Vrient" />
 			</Thumbnail>
 			<Details>
-				<h1>En nu even persoonlijk...</h1>
+				<h1>Heeft u nog vragen?</h1>
 				<p>
-					Heeft u vragen over mijn projecten of wilt u contact met mij opnemen,
+					Wilt u meer weten over mijn projecten of wilt u contact met mij opnemen,
 					 aarzel niet en vul het onderstaande formulier in.
 				</p>
 				<Button as={AnchorLink} href="#contact">

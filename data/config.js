@@ -1,10 +1,10 @@
 module.exports = {
-	defaultTitle: 'Werk van Jonas De Vrient',
+	defaultTitle: 'Jonas De Vrient',
 	logo: 'https://work.jonasdevrient.be/logo.png',
 	author: 'Jonas De Vrient',
 	url: 'https://work.jonasdevrient.be',
 	legalName: 'Jonas De Vrient',
-	defaultDescription: 'Werk van Jonas De Vrient',
+	defaultDescription: 'Al de projecten van Jonas De Vrient',
 	socialLinks: {
 		twitter: 'https://twitter.com/GioFieldz',
 		github: 'https://github.com/devrnt',
@@ -16,7 +16,7 @@ module.exports = {
 	themeColor: '#333399',
 	backgroundColor: '#333399',
 	social: {
-		facebook: 'facebook',
+		facebook: '@jonasdevrient',
 		twitter: '@JonasDeVrient',
 	},
 	address: {

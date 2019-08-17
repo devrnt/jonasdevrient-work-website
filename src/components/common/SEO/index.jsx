@@ -15,7 +15,7 @@ import {
 } from 'Data'
 
 export const SEO = ({
-	title = defaultTitle,
+	title = `Werk | ${defaultTitle}`,
 	description = defaultDescription,
 	location = '',
 }) => {

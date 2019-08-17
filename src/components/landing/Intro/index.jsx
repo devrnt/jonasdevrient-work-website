@@ -10,8 +10,8 @@ export const Intro = () => (
 		<Header />
 		<IntroWrapper as={Container}>
 			<Details>
-				<h1>Hallo daar!</h1>
-				<h4>Ik ben Jonas en deze pagina bevat mijn projecten!</h4>
+				<h1>Jonas De Vrient</h1>
+				<h4>Student Toegepaste Informatica</h4>
 				<Button as={AnchorLink} href="#projects">
 					Projecten
 				</Button>
