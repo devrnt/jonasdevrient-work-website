@@ -2,7 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Container, Card } from 'Common'
 import starIcon from 'Static/svg/star.svg'
-import forkIcon from 'Static/svg/fork.svg'
 import { Wrapper, Grid, Item, Content, Stats } from './styles'
 
 export const Projects = () => {
@@ -18,6 +17,7 @@ export const Projects = () => {
 			repositoryOwner(login: "devrnt") {
 				repositories(
 					first: 10
+					privacy: PUBLIC
 					orderBy: { field: STARGAZERS, direction: DESC }
 				) {
 					edges {
@@ -34,6 +34,15 @@ export const Projects = () => {
 									}
 								}
 							}
+							repositoryTopics(last:1) {
+                edges {
+                  node {
+                    topic {
+                      name
+                    }
+                  }
+                }
+              }
 							stargazers {
 								totalCount
 							}
@@ -49,7 +58,27 @@ export const Projects = () => {
 		<Wrapper as={Container} id="projects">
 			<h2>Projecten</h2>
 			<Grid>
-				{edges.map(({ node }) => (
+				{edges.map(({ node }) => {
+					let backgroundColor = '#333393';
+					let color = 'white';
+						switch (node.repositoryTopics.edges[0].node.topic.name) {
+							case 'mobile':
+								backgroundColor = '#e2e0ff';
+								color='rgb(62, 43, 165)';
+								break;
+							case 'website':
+								backgroundColor = '#333393';
+								color = 'rgb(240, 237, 255)';
+								break;
+							case 'school':
+								backgroundColor = 'rgba(0,0,0,0.12)';
+								color = 'rgb(62, 62, 62)';
+								break;
+							default:
+								break;
+						}
+				
+					return(
 						<Link
 							key={node.id}
 							to={`/${node.name}`}
@@ -62,32 +91,22 @@ export const Projects = () => {
 								<p>{node.description}</p>
 							</Content>
 							<Stats style={{position:`relative`}}>
-								<div>
-									<img src={starIcon} alt="stars" />
-									<span>{node.stargazers.totalCount}</span>
-								</div>
-								<div>
-									<img src={forkIcon} alt="forks" />
-									<span>{node.forkCount}</span>
-									{/* <span>{node.languages.edges}</span> */}
-								</div>
-								<div style={{position:`absolute`, right:`0`}}>
-										{node.languages.edges[0] !== undefined && 
-										<span 
-											style={{
-												padding: `0.3rem 0.75rem`,
-												color:`white`,
-												fontSize: `0.75rem`,
-												 backgroundColor: node.languages.edges[0].node.color,
-												 borderRadius: `3px`,
-											}}>
-											{node.languages.edges[0].node.name}</span>}
-								</div>
+									<span 
+										style={{
+												padding: `0.2rem 0.65rem`,
+												borderRadius: `3px`,
+												backgroundColor: backgroundColor,
+												fontWeight:`400`,
+												color:color,
+												fontSize: `0.9rem`,
+										}}>
+											{node.repositoryTopics.edges[0].node.topic.name}
+										</span>
 							</Stats>
 						</Card>
 					</Item>
 						</Link>
-				))}
+				)})}
 			</Grid>
 		</Wrapper>
 	)

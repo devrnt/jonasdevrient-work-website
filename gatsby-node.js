@@ -17,7 +17,7 @@ exports.createPages = async ({graphql, actions}) => {
     {
       github {
         repositoryOwner(login: "devrnt") {
-          repositories(first: 20, orderBy: {field: STARGAZERS, direction: DESC}) {
+          repositories(first: 20, privacy:PUBLIC, orderBy: {field: STARGAZERS, direction: DESC}) {
             edges {
               node {
                 name

@@ -4,7 +4,6 @@ import { Layout, Container } from 'Common'
 import { IntroWrapper, Details } from '../components/landing/Intro/styles'
 import { SEO } from '../components/common/SEO'
 import goBack from 'Static/svg/go-back.svg'
-import github from 'Static/svg/github.svg'
 
 export default ({ data }) => {
   const project = data.github.repositoryOwner.repository
@@ -71,6 +70,7 @@ export default ({ data }) => {
               >
                 View on GitHub
               </a>
+              {project.homepageUrl}
             </div>
             <div dangerouslySetInnerHTML={{ __html: dom.innerHTML }}></div>
           </Details>
@@ -89,10 +89,6 @@ export const query = graphql`
           url
           name
           description
-          stargazers {
-            totalCount
-          }
-          forkCount
         }
       }
     }
