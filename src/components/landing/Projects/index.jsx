@@ -16,7 +16,7 @@ export const Projects = () => {
 		github {
 			repositoryOwner(login: "devrnt") {
 				repositories(
-					first: 10
+					first: 50
 					privacy: PUBLIC
 					orderBy: { field: STARGAZERS, direction: DESC }
 				) {

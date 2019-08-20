@@ -63,16 +63,25 @@ export default ({ data }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  color: `#333399`,
-                  marginBottom: `0.15rem`,
-                  fontSize: `0.95rem`,
+                  marginBottom: `1rem`,
                 }}
               >
+               <span 
+										style={{
+												padding: `0.35rem 0.65rem`,
+												borderRadius: `3px`,
+												backgroundColor: `rgb(240, 237, 255)`,
+												fontWeight:`400`,
+												color:`#333393`,
+												fontSize: `0.9rem`,
+										}}>
+               
                 View on GitHub
+                </span>
               </a>
               {project.homepageUrl}
             </div>
-            <div dangerouslySetInnerHTML={{ __html: dom.innerHTML }}></div>
+            <div style={{lineHeight:`25px`}} dangerouslySetInnerHTML={{ __html: dom.innerHTML }}></div>
           </Details>
         </IntroWrapper>
       </Layout>
