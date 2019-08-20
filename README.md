@@ -1,4 +1,4 @@
-# JOnas De Vrient Werk Website
+# Jonas De Vrient Werk Website
 [GatsbyJS](https://www.gatsbyjs.org/) website voor Jonas De Vrient <br/>Live: [https://work.jonasdevrient.be](https://work.jonasdevrient.be)
 
 ## Beschrijving
