@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { Layout, Container } from 'Common'
-import styled from 'styled-components';
+import styled from 'styled-components'
 import { IntroWrapper, Details } from '../components/landing/Intro/styles'
 import { SEO } from '../components/common/SEO'
 import goBack from 'Static/svg/go-back.svg'
@@ -65,10 +65,7 @@ export default ({ data }) => {
             >
               <Link to="/#projects">
                 {/* Jonas De Vrient */}
-                <GoBackArrow
-                  src={goBack}
-                  alt="Ga terug"
-                />
+                <GoBackArrow src={goBack} alt="Ga terug" />
               </Link>
               <GitHubButton
                 href={project.url}
@@ -79,7 +76,10 @@ export default ({ data }) => {
               </GitHubButton>
               {project.homepageUrl}
             </div>
-            <div style={{lineHeight:`25px`}} dangerouslySetInnerHTML={{ __html: dom.innerHTML }}></div>
+            <div
+              style={{ lineHeight: `25px` }}
+              dangerouslySetInnerHTML={{ __html: dom.innerHTML }}
+            ></div>
           </Details>
         </IntroWrapper>
       </Layout>
