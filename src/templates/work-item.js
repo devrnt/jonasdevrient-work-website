@@ -1,9 +1,26 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import { Layout, Container } from 'Common'
+import styled from 'styled-components';
 import { IntroWrapper, Details } from '../components/landing/Intro/styles'
 import { SEO } from '../components/common/SEO'
 import goBack from 'Static/svg/go-back.svg'
+
+const GoBackArrow = styled.img`
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 2.5rem;
+`
+const GitHubButton = styled.a`
+  padding: 0.35rem 0.65rem;
+  border-radius: 3px;
+  background-color: rgb(240, 237, 255);
+  font-weight: 400;
+  color: #333393;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+`
 
 export default ({ data }) => {
   const project = data.github.repositoryOwner.repository
@@ -48,37 +65,18 @@ export default ({ data }) => {
             >
               <Link to="/#projects">
                 {/* Jonas De Vrient */}
-                <img
+                <GoBackArrow
                   src={goBack}
                   alt="Ga terug"
-                  style={{
-                    width: `2.5rem`,
-                    height: `2.5rem`,
-                    marginBottom: `2.5rem`,
-                  }}
                 />
               </Link>
-              <a
+              <GitHubButton
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  marginBottom: `1rem`,
-                }}
               >
-               <span 
-										style={{
-												padding: `0.35rem 0.65rem`,
-												borderRadius: `3px`,
-												backgroundColor: `rgb(240, 237, 255)`,
-												fontWeight:`400`,
-												color:`#333393`,
-												fontSize: `0.9rem`,
-										}}>
-               
                 View on GitHub
-                </span>
-              </a>
+              </GitHubButton>
               {project.homepageUrl}
             </div>
             <div style={{lineHeight:`25px`}} dangerouslySetInnerHTML={{ __html: dom.innerHTML }}></div>
