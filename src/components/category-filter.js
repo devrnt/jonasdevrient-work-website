@@ -9,8 +9,15 @@ class CategoryFilter extends React.Component {
   constructor(props) {
     super(props)
 
+    const allProjects = this.props.projects.filter(
+      project => project.repositoryTopics.edges.length > 0
+    )
+
     // Distinct categories
+    this.props.projects.forEach(p => console.log(p.repositoryTopics.edges[0]))
+
     const categories = this.props.projects
+      .filter(project => project.repositoryTopics.edges.length > 0)
       .map(project => project.repositoryTopics.edges[0].node.topic.name)
       .filter((value, index, self) => self.indexOf(value) === index)
 
@@ -18,7 +25,7 @@ class CategoryFilter extends React.Component {
     categories.sort()
 
     this.state = {
-      projects: props.projects,
+      projects: allProjects,
       categories,
       activeCategory: categories[0],
     }
@@ -47,6 +54,7 @@ class CategoryFilter extends React.Component {
                 ? 'rgb(240, 237, 255)'
                 : 'rgb(62, 62, 62)'
 
+            console.log(this.state.projects)
             return (
               <FilterButton
                 key={category}

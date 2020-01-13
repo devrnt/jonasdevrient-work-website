@@ -519,7 +519,7 @@ export const Global = createGlobalStyle`
       margin-bottom: calc(1.45rem / 2);
     }
     code {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       line-height: 1.45rem;
     }
     kbd {
@@ -573,9 +573,8 @@ export const Global = createGlobalStyle`
       border-radius: 3px;
       font-family: 'Red Hat Display', Consolas, 'Roboto Mono', 'Droid Sans Mono',
         'Liberation Mono', Menlo, Courier, monospace;
-      padding: 0;
-      padding-top: 0.2em;
-      padding-bottom: 0.2em;
+      padding: 0.2em 0.2rem;
+      margin: 0 0.1em;
     }
     pre code {
       background: none;
