@@ -67,7 +67,10 @@ const ContactForm = ({
 					name="recaptcha"
 					onChange={value => setFieldValue('recaptcha', value)}
 				/>
-				<ErrorMessage component={Error} name="recaptcha" />
+				{
+					touched.recaptcha && 
+						<ErrorMessage component={Error} name="recaptcha" />
+				}
 			</InputField>
 		)}
 		{values.success && (
